@@ -206,26 +206,26 @@ cursor: pointer;
       }
     </style>
 <script>
-
-var config = {
+	var config = {
     fields: {
-	
-        "LeadName": "#cname", // Name
-        "Email": "#eaddress", // Email
-        "MobilePhone": "#phone", // Phone
-        "UsrCompanyName": "#cname",
+        "Name": "#cname", // Name of a visitor, submitting the page
+         "Email": "#eaddress", // Email, // Visitor's email
+        "Zip" : "#zipcode", // Visitor's ZIP code
+        "MobilePhone": "#phone", // Phone, // Visitor's phone number
+        "Company": "#cname", // Name of a company (for business landing pages)
+        "City": "#city", // City
+        "Commentary": "#comments", // Notes
         "UsrFirstName": "#fname",
         "UsrLastName": "#lname",
-         "UsrAddress": "#address",
-         "City": "#city",
-         "Region" : "#state",
-         "Zip" : "#zipcode"
-},
-    landingId: "73063b4c-2877-49fd-b0d3-5303fab4985b",
-    serviceUrl: "https://099458-crm-bundle.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+         "UsrCompanyName": "#cname",
+        "UsrAddress": "#address",
+         
+    },
+ 
+    landingId: "93ea4764-3b61-474e-b746-eb4acab9e8a3",
+    serviceUrl: "https://112267-crm-bundle.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
     redirectUrl: ""
 };
-
 function createObject() {
     landing.createObjectFromLanding(config);
 	
@@ -315,6 +315,10 @@ jQuery(document).ready(initLanding)
 <div class="item">
             <label for="zipcode">Zip/Postal Code<span></span></label>
             <input id="zipcode" type="text"   name="zipcode" />
+          </div>
+	<div class="item">
+            <label for="comments"> Comments<span>*</span></label>
+            <input id="comments" type="text" name="comments" />
           </div>
 
 
