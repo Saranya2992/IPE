@@ -217,6 +217,7 @@ cursor: pointer;
         "MobilePhone": "#phone", // Phone, // Visitor's phone number
         "Company": "#cname", // Name of a company (for business landing pages)
         "City": "#city", // City
+	"Region" : "#state", //State
         "Commentary": "#comments", // Notes
         "UsrFirstName": "#fname",
         "UsrLastName": "#lname",
@@ -235,9 +236,9 @@ function createObject() {
 	
 	var cityId= $("#city option:selected").text();
    $("#city").val(cityId); 
-   //var stateId = $("#state option:selected").text();
-   //$("#state").val(stateId); 
-	alert ("Thank you, Your enquiry has been submitted");
+   var stateId = $("#state option:selected").text();
+   $("#state").val(stateId); 
+	
 }
 	
 function initLanding() {
@@ -247,6 +248,7 @@ function initLanding() {
  function onSubmit() {
 
         createObject();
+	 alert ("Thank you, Your enquiry has been submitted");
  }
 jQuery(document).ready(initLanding)
 </script>
